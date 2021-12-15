@@ -58,7 +58,6 @@ function TopicPickerGrid(props) {
                   size.width <= 768 ? null : { width: `${widthMap[index]}` }
                 }
               >
-                <div className={styles.h3}>{state.selected.topic}</div>
                 <div className={styles.p}>{state.selected.description}</div>
               </div>
             );

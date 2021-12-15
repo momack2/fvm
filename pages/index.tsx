@@ -260,7 +260,7 @@ function ListComponent(props) {
 function TopicComponent(props) {
   return (
     <span className={styles.topic}>
-      <span className={styles.topicImage}></span>
+      <span className={styles.topicImage}>{props.image}</span>
       <span className={styles.topicTitle}>{props.title}</span>
       <span className={styles.topicText}>{props.children}</span>
     </span>
@@ -402,8 +402,6 @@ function Home(props) {
           tools for developers to write smart contracts and take full advantage
           of the immense capabilities of the Filecoin Network.
         </TimelineItem>
-        <TimelineItem date="Q2 2022" title="Milestone 2: "></TimelineItem>
-        <TimelineItem date="Q2 2022" title="Milestone 2: "></TimelineItem>
       </div>
 
       <div className={styles.section}>
@@ -475,10 +473,50 @@ function Home(props) {
       </div>
 
       <div className={styles.row} style={{ paddingBottom: 128 }}>
-        <TopicComponent title="Build a use case">...</TopicComponent>
-        <TopicComponent title="Battletest the FVM">...</TopicComponent>
-        <TopicComponent title="Bridge another language">...</TopicComponent>
-        <TopicComponent title="Engage with the community">...</TopicComponent>
+        <TopicComponent
+          image={
+            <img
+              src="/artwork/artwork-5.png"
+              className={styles.artworkChoice}
+            />
+          }
+          title="Build a use case"
+        >
+          ...
+        </TopicComponent>
+        <TopicComponent
+          title="Battletest the FVM"
+          image={
+            <img
+              src="/artwork/artwork-2.png"
+              className={styles.artworkChoice}
+            />
+          }
+        >
+          ...
+        </TopicComponent>
+        <TopicComponent
+          title="Bridge another language"
+          image={
+            <img
+              src="/artwork/artwork-22.png"
+              className={styles.artworkChoice}
+            />
+          }
+        >
+          ...
+        </TopicComponent>
+        <TopicComponent
+          title="Engage with the community"
+          image={
+            <img
+              src="/artwork/artwork-1.png"
+              className={styles.artworkChoice}
+            />
+          }
+        >
+          ...
+        </TopicComponent>
       </div>
 
       <Footer />
