@@ -11,9 +11,16 @@ import Footer from "@components/Footer";
 import Navigation from "@components/Navigation";
 import TopicPickerGrid from "@components/TopicPickerGrid";
 
+import Art1 from "@components/artwork/1";
+import Art2 from "@components/artwork/2";
+import Art3 from "@components/artwork/3";
+
 const TOPICS = [
   {
     topic: "Decentralized Compute",
+    artwork: (
+      <img src="/artwork/artwork-12.png" className={styles.artworkTopic} />
+    ),
     description: (
       <React.Fragment>
         With Filecoin and IPFS, content-addressed data may be stored anywhere in
@@ -41,6 +48,9 @@ const TOPICS = [
   },
   {
     topic: "Perpetual Storage",
+    artwork: (
+      <img src="/artwork/artwork-13.png" className={styles.artworkTopic} />
+    ),
     description: (
       <React.Fragment>
         Many common-good datasets rely on stewarding organizations to ensure
@@ -67,6 +77,9 @@ const TOPICS = [
   },
   {
     topic: "Insurance Protocols",
+    artwork: (
+      <img src="/artwork/artwork-3.png" className={styles.artworkTopic} />
+    ),
     description: (
       <React.Fragment>
         When offering storage services to the network, storage providers are
@@ -79,6 +92,9 @@ const TOPICS = [
   },
   {
     topic: "Storage Derivatives",
+    artwork: (
+      <img src="/artwork/artwork-4.png" className={styles.artworkTopic} />
+    ),
     description: (
       <React.Fragment>
         The dynamic nature of decentralized storage costs cause planning
@@ -102,6 +118,9 @@ const TOPICS = [
   },
   {
     topic: "Staking Protocols",
+    artwork: (
+      <img src="/artwork/artwork-13.png" className={styles.artworkTopic} />
+    ),
     description: (
       <React.Fragment>
         Staking Protocols can substantially improve the capital efficiency in
@@ -120,6 +139,9 @@ const TOPICS = [
   },
   {
     topic: "Data DAOs",
+    artwork: (
+      <img src="/artwork/artwork-14.png" className={styles.artworkTopic} />
+    ),
     description: (
       <React.Fragment>
         DAOs (Decentralized Autonomous Organizations) are member-owned
@@ -131,6 +153,9 @@ const TOPICS = [
   },
   {
     topic: "Enabling L2 networks",
+    artwork: (
+      <img src="/artwork/artwork-7.png" className={styles.artworkTopic} />
+    ),
     description: (
       <React.Fragment>
         Dedicated networks –with independent incentive systems– that conduct
@@ -153,6 +178,9 @@ const TOPICS = [
   },
   {
     topic: "Cross-chain interoperability bridges",
+    artwork: (
+      <img src="/artwork/artwork-15.png" className={styles.artworkTopic} />
+    ),
     description: (
       <React.Fragment>
         Filecoin actors that serve as bridges by understanding the cryptographic
@@ -171,6 +199,9 @@ const TOPICS = [
   },
   {
     topic: "New storage market primitives",
+    artwork: (
+      <img src="/artwork/artwork-17.png" className={styles.artworkTopic} />
+    ),
     description: (
       <React.Fragment>
         To store data in the Filecoin network, clients must find a suitable
@@ -190,6 +221,9 @@ const TOPICS = [
   },
   {
     topic: "Replication workers",
+    artwork: (
+      <img src="/artwork/artwork-19.png" className={styles.artworkTopic} />
+    ),
     description: (
       <React.Fragment>
         Clients want their data to be replicated across the network to maximize
@@ -335,7 +369,9 @@ function Home(props) {
           className={styles.p}
           style={{ maxWidth: 488, paddingTop: 24, paddingBottom: 64 }}
         >
-          <b>The Filecoin Virtual Machine will be introduced incrementally.</b>
+          <b>
+            The Filecoin Virtual Machine will be introduced incrementally.&nbsp;
+          </b>
           This minimizes the risk of disruption to the network.
           <br />
           <br />

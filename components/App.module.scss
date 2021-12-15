@@ -253,3 +253,12 @@
   line-height: 1.5;
   color: var(--color-shark-gray);
 }
+
+.artworkTopic {
+  display: block;
+  width: 70%;
+
+  @media (max-width: 768px) {
+    width: 90px;
+  }
+}
