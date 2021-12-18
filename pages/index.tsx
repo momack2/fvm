@@ -246,7 +246,7 @@ const TOPICS = [
 function ListComponent(props) {
   return (
     <span className={styles.listItem}>
-      <span className={styles.listItemLeft}></span>
+      <span className={styles.listItemLeft}>{props.image}</span>
       <span className={styles.listItemRight}>
         <div className={styles.listItemTitle} style={{ marginTop: 0 }}>
           {props.title}
@@ -418,45 +418,84 @@ function Home(props) {
 
       <div className={styles.row} style={{ paddingBottom: 128 }}>
         <div className={styles.rowCol}>
-          <h3 className={styles.h3} style={{ marginTop: 48 }}>
+          <h3 className={styles.h3custom} style={{ marginTop: 48 }}>
             Developer resources
           </h3>
-          <ListComponent title="Tutorials">
-            {/* @cake 'coming soon' badge? */}
+          <ListComponent
+            title="Tutorials"
+            image={
+              <img src="/spots/horizontal-1.png" className={styles.spot} />
+            }
+          >
             Learn how to deploy to the FVM with some simple tutorials.
           </ListComponent>
-          <ListComponent title="Open issues">
+          <ListComponent
+            title="Open issues"
+            image={
+              <img src="/spots/horizontal-2.png" className={styles.spot} />
+            }
+          >
             Follow the issues on GitHub and stay up to date.
           </ListComponent>
-          <h3 className={styles.h3} style={{ marginTop: 48 }}>
+          <h3 className={styles.h3custom} style={{ marginTop: 48 }}>
             Specifications
           </h3>
-          <ListComponent title="FVM Architecture">
+          <ListComponent
+            title="FVM Architecture"
+            image={
+              <img src="/spots/horizontal-1.png" className={styles.spot} />
+            }
+          >
             Learn how the FVM works and the technologies involved.
           </ListComponent>
-          <ListComponent title="EVM Compatibility">
+          <ListComponent
+            title="EVM Compatibility"
+            image={
+              <img src="/spots/horizontal-1.png" className={styles.spot} />
+            }
+          >
             Learn how the EVM emulation works, and how you can use the EVM with
             the FVM.
           </ListComponent>
         </div>
 
         <div className={styles.rowCol}>
-          <h3 className={styles.h3} style={{ marginTop: 48 }}>
+          <h3 className={styles.h3custom} style={{ marginTop: 48 }}>
             SDKs
           </h3>
-          <ListComponent title="Rust SDK">
+          <ListComponent
+            title="Rust SDK"
+            image={
+              <img src="/spots/horizontal-1.png" className={styles.spot} />
+            }
+          >
             {/* @cake 'coming soon' badge? */}
             Write Filecoin actors in Rust
           </ListComponent>
-          <ListComponent title="Swift SDK">
+          <ListComponent
+            title="Swift SDK"
+            image={
+              <img src="/spots/horizontal-1.png" className={styles.spot} />
+            }
+          >
             {/* @cake 'build it' badge? */}
             Write Filecoin actors in Swift
           </ListComponent>
-          <ListComponent title="Kotlin SDK">
+          <ListComponent
+            title="Kotlin SDK"
+            image={
+              <img src="/spots/horizontal-1.png" className={styles.spot} />
+            }
+          >
             {/* @cake 'build it' badge? */}
             Write Filecoin actors in Kotlin
           </ListComponent>
-          <ListComponent title="Go SDK">
+          <ListComponent
+            title="Go SDK"
+            image={
+              <img src="/spots/horizontal-1.png" className={styles.spot} />
+            }
+          >
             {/* @cake 'build it' badge? */}
             Write Filecoin actors in Go (using the TinyGo compiler)
           </ListComponent>
@@ -467,55 +506,41 @@ function Home(props) {
         <h2 className={styles.h2} style={{ marginTop: 96 }}>
           Want to hack on the FVM?
         </h2>
-        <p className={styles.p} style={{ maxWidth: 488, paddingTop: 24 }}>
-          There is a ton of opportunity to get involed.
-        </p>
       </div>
 
       <div className={styles.row} style={{ paddingBottom: 128 }}>
         <TopicComponent
           image={
-            <img
-              src="/artwork/artwork-5.png"
-              className={styles.artworkChoice}
-            />
+            <img src="/heroes/hero-1.png" className={styles.artworkChoice} />
           }
           title="Build a use case"
         >
-          ...
+          Get rewarded for building an example smart contract for the community.
         </TopicComponent>
         <TopicComponent
-          title="Battletest the FVM"
+          title="Battletest it"
           image={
-            <img
-              src="/artwork/artwork-2.png"
-              className={styles.artworkChoice}
-            />
+            <img src="/heroes/hero-2.png" className={styles.artworkChoice} />
           }
         >
-          ...
+          Try to break out implementation. There are rewards for helping us find
+          bugs and fix issues.
         </TopicComponent>
         <TopicComponent
           title="Bridge another language"
           image={
-            <img
-              src="/artwork/artwork-22.png"
-              className={styles.artworkChoice}
-            />
+            <img src="/heroes/hero-3.png" className={styles.artworkChoice} />
           }
         >
-          ...
+          Help bring more programs to our network.
         </TopicComponent>
         <TopicComponent
           title="Engage with the community"
           image={
-            <img
-              src="/artwork/artwork-1.png"
-              className={styles.artworkChoice}
-            />
+            <img src="/heroes/hero-4.png" className={styles.artworkChoice} />
           }
         >
-          ...
+          Come join the Filecoin community and work with us to build Web3.
         </TopicComponent>
       </div>
 

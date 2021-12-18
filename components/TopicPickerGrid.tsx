@@ -75,7 +75,7 @@ function TopicPickerGrid(props) {
                 <div
                   className={styles.item}
                   style={{
-                    background: isSelected ? "#161616" : null,
+                    background: isSelected ? "var(--color-inset)" : null,
                   }}
                 >
                   <div className={styles.number}>{each.artwork}</div>

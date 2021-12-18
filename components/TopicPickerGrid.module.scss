@@ -42,7 +42,7 @@
   display: inline-flex;
   flex-direction: column;
   text-align: left;
-  padding: 16px;
+  padding: 24px;
 
   animation: fadeIn 400ms ease;
 }
@@ -56,10 +56,11 @@
   justify-content: space-between;
   transition: 200ms ease all;
   height: 400px;
+  border-radius: 2px;
 
   &:hover {
     cursor: pointer;
-    background: rgba(0, 0, 0, 0.1);
+    background: var(--color-inset);
   }
 
   @media (max-width: 768px) {

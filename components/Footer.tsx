@@ -6,11 +6,10 @@ function Footer(props) {
     <div className={styles.container}>
       <footer className={styles.footer}>
         <div className={styles.col}>
-          <Logo height="64px" />
+          <Logo height="128px" />
           <p className={styles.p}>
             The <b>Filecoin Virtual Machine</b> defines the rules for computing
-            valid state on the Filecoin Network, an open-source cloud storage
-            marketplace, protocol, and incentive layer.
+            valid state on the Filecoin Network.
           </p>
         </div>
         <div className={styles.col}>

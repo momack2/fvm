@@ -32,9 +32,19 @@
   line-height: 1.4;
 }
 
+.h3custom {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: "MonoMedium";
+  color: #777;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
 .p {
   font-size: var(--typescale-base);
   line-height: 1.5;
+  color: #dcdcdc;
 }
 
 .desc {
@@ -129,8 +139,9 @@
 .topicImage {
   display: flex;
   width: 100%;
-  height: 256px;
   display: block;
+  background: var(--color-inset);
+  border-radius: 2px;
 }
 
 .topicTitle {
@@ -232,16 +243,20 @@
 }
 
 .listItemLeft {
-  border: 1px solid var(--theme-border);
   flex-shrink: 0;
   width: 40%;
-  height: 64px;
+}
+
+.spot {
+  display: block;
+  width: 100%;
 }
 
 .listItemRight {
   min-width: 10%;
   width: 100%;
   padding-left: 24px;
+  padding-top: 24px;
 }
 
 .listItemTitle {
