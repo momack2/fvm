@@ -20,7 +20,7 @@ const TOPICS = [
   {
     topic: "Decentralized Compute",
     artwork: (
-      <img src="/artwork/artwork-12.png" className={styles.artworkTopic} />
+      <img src="/use-cases/use-case-1.png" className={styles.artworkTopic} />
     ),
     description: (
       <React.Fragment>
@@ -50,7 +50,7 @@ const TOPICS = [
   {
     topic: "Perpetual Storage",
     artwork: (
-      <img src="/artwork/artwork-13.png" className={styles.artworkTopic} />
+      <img src="/use-cases/use-case-2.png" className={styles.artworkTopic} />
     ),
     description: (
       <React.Fragment>
@@ -79,7 +79,7 @@ const TOPICS = [
   {
     topic: "Insurance Protocols",
     artwork: (
-      <img src="/artwork/artwork-3.png" className={styles.artworkTopic} />
+      <img src="/use-cases/use-case-3.png" className={styles.artworkTopic} />
     ),
     description: (
       <React.Fragment>
@@ -94,7 +94,7 @@ const TOPICS = [
   {
     topic: "Storage Derivatives",
     artwork: (
-      <img src="/artwork/artwork-4.png" className={styles.artworkTopic} />
+      <img src="/use-cases/use-case-4.png" className={styles.artworkTopic} />
     ),
     description: (
       <React.Fragment>
@@ -120,7 +120,7 @@ const TOPICS = [
   {
     topic: "Staking Protocols",
     artwork: (
-      <img src="/artwork/artwork-13.png" className={styles.artworkTopic} />
+      <img src="/use-cases/use-case-5.png" className={styles.artworkTopic} />
     ),
     description: (
       <React.Fragment>
@@ -141,7 +141,7 @@ const TOPICS = [
   {
     topic: "Data DAOs",
     artwork: (
-      <img src="/artwork/artwork-14.png" className={styles.artworkTopic} />
+      <img src="/use-cases/use-case-6.png" className={styles.artworkTopic} />
     ),
     description: (
       <React.Fragment>
@@ -155,7 +155,7 @@ const TOPICS = [
   {
     topic: "Enabling L2 networks",
     artwork: (
-      <img src="/artwork/artwork-7.png" className={styles.artworkTopic} />
+      <img src="/use-cases/use-case-7.png" className={styles.artworkTopic} />
     ),
     description: (
       <React.Fragment>
@@ -180,7 +180,7 @@ const TOPICS = [
   {
     topic: "Cross-chain interoperability bridges",
     artwork: (
-      <img src="/artwork/artwork-15.png" className={styles.artworkTopic} />
+      <img src="/use-cases/use-case-8.png" className={styles.artworkTopic} />
     ),
     description: (
       <React.Fragment>
@@ -201,7 +201,7 @@ const TOPICS = [
   {
     topic: "New storage market primitives",
     artwork: (
-      <img src="/artwork/artwork-17.png" className={styles.artworkTopic} />
+      <img src="/use-cases/use-case-9.png" className={styles.artworkTopic} />
     ),
     description: (
       <React.Fragment>
@@ -223,7 +223,7 @@ const TOPICS = [
   {
     topic: "Replication workers",
     artwork: (
-      <img src="/artwork/artwork-19.png" className={styles.artworkTopic} />
+      <img src="/use-cases/use-case-10.png" className={styles.artworkTopic} />
     ),
     description: (
       <React.Fragment>
@@ -291,7 +291,7 @@ function TimelineItem(props) {
           <Checkmark height="16px" />
         </span>
       ) : (
-        <span className={styles.timelineItemDot} />
+        <span className={styles.timelineItemDot}></span>
       )}
       <span className={styles.timelineItemText}>
         <div className={styles.h3}>{props.title}</div>
@@ -299,6 +299,7 @@ function TimelineItem(props) {
           {props.children}
         </div>
       </span>
+      {props.last ? null : <div className={styles.timelineLine} />}
     </span>
   );
 }
@@ -400,6 +401,7 @@ function Home(props) {
         <TimelineItem
           date="Q1 2022"
           title="Milestone 1: Mainnet deployment of built-in actors on FVM"
+          last
         >
           New clear and informative documentation is released to the world. More
           tools for developers to write smart contracts and take full advantage

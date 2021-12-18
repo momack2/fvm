@@ -44,12 +44,12 @@
 .p {
   font-size: var(--typescale-base);
   line-height: 1.5;
-  color: #dcdcdc;
+  color: var(--color-shark-gray);
 }
 
 .desc {
   font-size: var(--typescale-base);
-  color: var(--color-light-gray);
+  color: var(--color-shark-gray);
   line-height: 1.5;
   max-width: 568px;
 }
@@ -207,6 +207,7 @@
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 32px;
+  position: relative;
 }
 
 .timelineItemDate {
@@ -218,14 +219,29 @@
 }
 
 .timelineItemDot {
-  height: 25px;
-  width: 25px;
+  height: 28px;
+  width: 28px;
   border-radius: 24px;
-  background: var(--color-inset);
+  background: #fff;
   flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  border: 4px solid #282f4d;
+}
+
+.timelineLine {
+  width: 2px;
+  height: calc(100% + 10px);
+  background: #282f4d;
+  position: absolute;
+  bottom: -35px;
+  left: 94px;
+
+  @media (max-width: 768px) {
+    left: 88px;
+  }
 }
 
 .timelineItemText {
