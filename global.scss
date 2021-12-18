@@ -135,8 +135,8 @@ body {
   --typescale-base: 1rem;
   --typescale-1: 0.875rem;
 
-  --color-black: #0d0f19;
-  --color-dark-black: #1c2035;
+  --color-black: #0a0c15;
+  --color-dark-black: #0d0f19;
   --color-anchor-gray: #535661;
   --color-slate-gray: #888a93;
   --color-shark-gray: #c8c9cc;
@@ -149,14 +149,14 @@ body {
   --theme-border: var(--color-slate-gray);
   --theme-button: #0f379d;
   --theme-button-hover: #3aba4d;
-  --theme-success: var(--color-success);
+  --theme-success: #0e67ff;
 
   font-size: 16px;
   @media (max-width: 768px) {
     font-size: 14px;
   }
 
-  background: var(--theme-background);
+  background: var(--color-inset);
   color: var(--color-light-gray);
   font-family: "Book", -apple-system, BlinkMacSystemFont, helvetica neue,
     helvetica, sans-serif;

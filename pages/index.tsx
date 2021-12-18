@@ -10,6 +10,7 @@ import Checkmark from "@components/Checkmark";
 import Footer from "@components/Footer";
 import Navigation from "@components/Navigation";
 import TopicPickerGrid from "@components/TopicPickerGrid";
+import Tag from "@components/Tag";
 
 import Art1 from "@components/artwork/1";
 import Art2 from "@components/artwork/2";
@@ -249,7 +250,7 @@ function ListComponent(props) {
       <span className={styles.listItemLeft}>{props.image}</span>
       <span className={styles.listItemRight}>
         <div className={styles.listItemTitle} style={{ marginTop: 0 }}>
-          {props.title}
+          {props.title}&nbsp;{props.tag}
         </div>
         <div className={styles.listItemParagraph}>{props.children}</div>
       </span>
@@ -261,7 +262,9 @@ function TopicComponent(props) {
   return (
     <span className={styles.topic}>
       <span className={styles.topicImage}>{props.image}</span>
-      <span className={styles.topicTitle}>{props.title}</span>
+      <span className={styles.topicTitle}>
+        {props.title}&nbsp;{props.tag}
+      </span>
       <span className={styles.topicText}>{props.children}</span>
     </span>
   );
@@ -283,7 +286,7 @@ function TimelineItem(props) {
       {props.isChecked ? (
         <span
           className={styles.timelineItemDot}
-          style={{ background: "var(--color-green)", color: "#fff" }}
+          style={{ background: "var(--theme-success)", color: "#fff" }}
         >
           <Checkmark height="16px" />
         </span>
@@ -423,17 +426,15 @@ function Home(props) {
           </h3>
           <ListComponent
             title="Tutorials"
-            image={
-              <img src="/spots/horizontal-1.png" className={styles.spot} />
-            }
+            tag={<Tag>Coming Soon</Tag>}
+            image={<img src="/spots/spot-1.png" className={styles.spot} />}
           >
             Learn how to deploy to the FVM with some simple tutorials.
           </ListComponent>
           <ListComponent
             title="Open issues"
-            image={
-              <img src="/spots/horizontal-2.png" className={styles.spot} />
-            }
+            href="https://github.com/filecoin-project/fvm"
+            image={<img src="/spots/spot-2.png" className={styles.spot} />}
           >
             Follow the issues on GitHub and stay up to date.
           </ListComponent>
@@ -442,17 +443,15 @@ function Home(props) {
           </h3>
           <ListComponent
             title="FVM Architecture"
-            image={
-              <img src="/spots/horizontal-1.png" className={styles.spot} />
-            }
+            tag={<Tag>Coming Soon</Tag>}
+            image={<img src="/spots/spot-3.png" className={styles.spot} />}
           >
             Learn how the FVM works and the technologies involved.
           </ListComponent>
           <ListComponent
             title="EVM Compatibility"
-            image={
-              <img src="/spots/horizontal-1.png" className={styles.spot} />
-            }
+            tag={<Tag>Coming Soon</Tag>}
+            image={<img src="/spots/spot-4.png" className={styles.spot} />}
           >
             Learn how the EVM emulation works, and how you can use the EVM with
             the FVM.
@@ -465,8 +464,9 @@ function Home(props) {
           </h3>
           <ListComponent
             title="Rust SDK"
-            image={
-              <img src="/spots/horizontal-1.png" className={styles.spot} />
+            image={<img src="/spots/spot-5.png" className={styles.spot} />}
+            tag={
+              <Tag style={{ background: `#ff0000`, color: "#fff" }}>WIP</Tag>
             }
           >
             {/* @cake 'coming soon' badge? */}
@@ -474,8 +474,9 @@ function Home(props) {
           </ListComponent>
           <ListComponent
             title="Swift SDK"
-            image={
-              <img src="/spots/horizontal-1.png" className={styles.spot} />
+            image={<img src="/spots/spot-6.png" className={styles.spot} />}
+            tag={
+              <Tag style={{ background: `#ff0000`, color: "#fff" }}>WIP</Tag>
             }
           >
             {/* @cake 'build it' badge? */}
@@ -483,8 +484,9 @@ function Home(props) {
           </ListComponent>
           <ListComponent
             title="Kotlin SDK"
-            image={
-              <img src="/spots/horizontal-1.png" className={styles.spot} />
+            image={<img src="/spots/spot-7.png" className={styles.spot} />}
+            tag={
+              <Tag style={{ background: `#ff0000`, color: "#fff" }}>WIP</Tag>
             }
           >
             {/* @cake 'build it' badge? */}
@@ -492,8 +494,9 @@ function Home(props) {
           </ListComponent>
           <ListComponent
             title="Go SDK"
-            image={
-              <img src="/spots/horizontal-1.png" className={styles.spot} />
+            image={<img src="/spots/spot-8.png" className={styles.spot} />}
+            tag={
+              <Tag style={{ background: `#ff0000`, color: "#fff" }}>WIP</Tag>
             }
           >
             {/* @cake 'build it' badge? */}
@@ -513,12 +516,15 @@ function Home(props) {
           image={
             <img src="/heroes/hero-1.png" className={styles.artworkChoice} />
           }
-          title="Build a use case"
+          title="Build"
+          tag={<Tag>Coming Soon</Tag>}
         >
-          Get rewarded for building an example smart contract for the community.
+          Build a use case for the FVM. Get rewarded for building an example
+          smart contract for the community.
         </TopicComponent>
         <TopicComponent
-          title="Battletest it"
+          title="Battletesting"
+          tag={<Tag>Coming Soon</Tag>}
           image={
             <img src="/heroes/hero-2.png" className={styles.artworkChoice} />
           }
@@ -527,20 +533,24 @@ function Home(props) {
           bugs and fix issues.
         </TopicComponent>
         <TopicComponent
-          title="Bridge another language"
+          title="Bridges"
+          tag={<Tag>Coming Soon</Tag>}
           image={
             <img src="/heroes/hero-3.png" className={styles.artworkChoice} />
           }
         >
-          Help bring more programs to our network.
+          Write a bridge to another language. Help bring more programs to our
+          network.
         </TopicComponent>
         <TopicComponent
-          title="Engage with the community"
+          title="Community"
+          tag={<Tag>Coming Soon</Tag>}
           image={
             <img src="/heroes/hero-4.png" className={styles.artworkChoice} />
           }
         >
-          Come join the Filecoin community and work with us to build Web3.
+          Engage with our ecosystem and community. Come join the Filecoin
+          community and work with us to build Web3.
         </TopicComponent>
       </div>
 

@@ -1,0 +1,15 @@
+.tag {
+  font-family: "Mono";
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2px 4px 2px 4px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-left: 8px;
+  transform: translateY(-2px);
+  background: #fedc56;
+  color: #000;
+  display: inline-block;
+  vertical-align: middle;
+}
