@@ -246,27 +246,27 @@ const TOPICS = [
 
 function ListComponent(props) {
   return (
-    <span className={styles.listItem}>
+    <a className={styles.listItem} href={props.href} target="_blank">
       <span className={styles.listItemLeft}>{props.image}</span>
       <span className={styles.listItemRight}>
-        <div className={styles.listItemTitle} style={{ marginTop: 0 }}>
+        <span className={styles.listItemTitle} style={{ marginTop: 0 }}>
           {props.title}&nbsp;{props.tag}
-        </div>
-        <div className={styles.listItemParagraph}>{props.children}</div>
+        </span>
+        <span className={styles.listItemParagraph}>{props.children}</span>
       </span>
-    </span>
+    </a>
   );
 }
 
 function TopicComponent(props) {
   return (
-    <span className={styles.topic}>
+    <a className={styles.topic} href={props.href} target="_blank">
       <span className={styles.topicImage}>{props.image}</span>
       <span className={styles.topicTitle}>
         {props.title}&nbsp;{props.tag}
       </span>
       <span className={styles.topicText}>{props.children}</span>
-    </span>
+    </a>
   );
 }
 
@@ -299,7 +299,6 @@ function TimelineItem(props) {
           {props.children}
         </div>
       </span>
-      {props.last ? null : <div className={styles.timelineLine} />}
     </span>
   );
 }
