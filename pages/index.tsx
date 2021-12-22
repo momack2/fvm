@@ -18,106 +18,6 @@ import Art3 from "@components/artwork/3";
 
 const TOPICS = [
   {
-    topic: "Decentralized Compute",
-    artwork: (
-      <img src="/use-cases/use-case-1.png" className={styles.artworkTopic} />
-    ),
-    description: (
-      <React.Fragment>
-        With Filecoin and IPFS, content-addressed data may be stored anywhere in
-        the globe. Furthermore, the structure of datasets varies dramatically.
-        Data can be coarse or fine-grained, and its individual units can be
-        hash-linked with [IPLD](https://ipld.io/). Data can be highly
-        capillarized and disseminated throughout the network. As a result,
-        segments of a given dataset may be stored far away from one another.
-        <br />
-        <br />
-        Frequently, users want to execute data pipelines to validate, transform,
-        aggregate, normalize, and generally process datasets to extract
-        insights, construct models, and derive new value. Regrouping highly
-        distributed data into a central location to perform compute on it is
-        expensive, underperformant, and undesirable. Therefore, pushing compute
-        to the edges and creating systems to coordinate decentralized
-        computation pipelines is a must.
-        <br />
-        <br />
-        FVM actors can help to broker computational resources, incentivize
-        execution, distribute workloads, and prove the validity of the result in
-        order to claim rewards.
-      </React.Fragment>
-    ),
-  },
-  {
-    topic: "Perpetual Storage",
-    artwork: (
-      <img src="/use-cases/use-case-2.png" className={styles.artworkTopic} />
-    ),
-    description: (
-      <React.Fragment>
-        Many common-good datasets rely on stewarding organizations to ensure
-        their preservation and continued revision (e.g. a government,
-        corporation, or non-profit). Frequently, the responsibility lies on a
-        single organization. If that organization goes away or changes
-        motivation, the common-good data could be lost forever, resulting in a
-        loss for society.
-        <br />
-        <br />
-        With smart contracts, the responsibility of ensuring valuable data is
-        kept alive can be shared collectively, and its continuation and renewal
-        can guaranteed by permissionless code running autonomously on-chain -
-        with no risk of modification or alteration of the underlying datasets.
-        Funding mechanisms can be coupled with [DataDAOs](/datadaos) and
-        [Staking Protocols](/staking-protocols) to enable pay-once-store-forever
-        mechanics.
-        <br />
-        <br />
-        Example use cases: Crime statistics, inflation metrics, election
-        results.
-      </React.Fragment>
-    ),
-  },
-  {
-    topic: "Insurance Protocols",
-    artwork: (
-      <img src="/use-cases/use-case-3.png" className={styles.artworkTopic} />
-    ),
-    description: (
-      <React.Fragment>
-        When offering storage services to the network, storage providers are
-        required to put a large amount of collateral. Insurance protocols allow
-        storage providers can better select risk to align with their desired
-        profile by offering fees to investors. Investors (or DAOs) can receive a
-        revenue stream by purchasing said risk in exchange for recurring fees.
-      </React.Fragment>
-    ),
-  },
-  {
-    topic: "Storage Derivatives",
-    artwork: (
-      <img src="/use-cases/use-case-4.png" className={styles.artworkTopic} />
-    ),
-    description: (
-      <React.Fragment>
-        The dynamic nature of decentralized storage costs cause planning
-        challenges for both producers and consumers. Data producers will need to
-        store data in the future for a predefined period of time and will want
-        to budget in costs now (e.g. a bank who knows they will need to store 1
-        TB of 2021 transaction data from January 1, 2022 to December 31, 2022).
-        Storage providers will want to know how much to spend on hardware based
-        on their predicted earnings. Providing a way to smooth predictability
-        about future costs and returns will bring stability to this market and
-        reduce risk.
-        <br />
-        <br />
-        By enabling users to “pre-buy” a chunk of storage space at a specific
-        price today, a data producer will be able to predict their costs over a
-        given period of time. By enabling a storage producer to bid on
-        delivering a block of storage in the future, they will be able to
-        purchase hardware and be more secure that they are margin positive.
-      </React.Fragment>
-    ),
-  },
-  {
     topic: "Staking Protocols",
     artwork: (
       <img src="/use-cases/use-case-5.png" className={styles.artworkTopic} />
@@ -134,7 +34,130 @@ const TOPICS = [
         <br />
         Staking protocols can use on-chain metrics (e.g. longevity of an
         address, history of slashing) to better assess risk while also allowing
-        storage providers of all sizes to access capital.{" "}
+        storage providers of all sizes to access capital. This can help storage
+        providers fund up-front capital costs like Filecoin+ deal collateral, while
+        giving staking pools access to significant yield potential.
+      </React.Fragment>
+    ),
+  },
+  {
+    topic: "Decentralized Compute",
+    artwork: (
+      <img src="/use-cases/use-case-1.png" className={styles.artworkTopic} />
+    ),
+    description: (
+      <React.Fragment>
+        Filecoin and IPFS enable distributing content-addressed datasets across many 
+        storage providers around the world to increase data redundancy and resiliency. 
+        Globally distributed data brings significant cost and reliability advantages, 
+        but can also mean parts of a given dataset may be stored far away from one another.
+        <br />
+        <br />
+        Frequently, storage clients don't just want to store data long-term, but
+        want to execute data pipelines over these globally distributed datasets to 
+        validate, transform, aggregate, normalize, and generally process datasets to extract
+        insights, construct models, and derive new value. Regrouping highly
+        distributed data into a central location to compute over it is
+        expensive, underperformant, and undesirable. Therefore, pushing compute
+        to the edges and creating systems to coordinate decentralized
+        computation pipelines is a must. 
+        To enable efficient computation over these globally distributed datasets, it
+        makes sense to bring the program to the data, instead of vice versa.
+        <br />
+        <br />
+        FVM actors can help to broker computational resources, incentivize compute
+        execution, distribute workloads across available storage providers, and prove 
+        the validity of the computation's result in order to claim rewards.
+      </React.Fragment>
+    ),
+  },
+  {
+    topic: "Perpetual Storage",
+    artwork: (
+      <img src="/use-cases/use-case-2.png" className={styles.artworkTopic} />
+    ),
+    description: (
+      <React.Fragment>
+        Many common-good datasets rely on stewarding organizations to ensure
+        their preservation and continued resilience (e.g. a government,
+        corporation, or non-profit). When this responsibility lies on a
+        single organization, it can create a central point of failure. 
+        If that organization goes away or changes motivation, the common-good 
+        data could be lost forever, resulting in a loss for society.
+        <br />
+        <br />
+        With smart contracts, the responsibility of ensuring valuable data is
+        kept alive can be shared collectively, and its continuation and renewal
+        can be guaranteed by permissionless code running autonomously on-chain -
+        with no risk of modification or alteration of the underlying datasets.
+        Funding mechanisms can be coupled with [DataDAOs](/datadaos) and
+        [Staking Protocols](/staking-protocols) to enable pay-once-store-forever
+        mechanics.
+        <br />
+        <br />
+        Example use cases: Crime statistics, inflation metrics, election
+        results, envrionmental data records, etc.
+      </React.Fragment>
+    ),
+  },
+  {
+    topic: "Repair workers",
+    artwork: (
+      <img src="/use-cases/use-case-10.png" className={styles.artworkTopic} />
+    ),
+    description: (
+      <React.Fragment>
+        Many clients who store data on Filecoin want both the verifiability of a storage 
+        network that provably stores their data over time, and the ease of use of a fire-and-forget
+        storage system they can trust to automatically repair itself over time.
+        <br />
+        <br />
+        Repair workers solve this problem by automating the process of renewing expired or terminated deals
+        - saving the client the time and overhead of manually refreshing deals 2, 5, or 10+ years in the future. 
+        Instead, the repair worker can monitor the chain on the clients behalf for any faults or expirations, 
+        and proactively replicate deal data to more storage providers in accordance with a user-defined policy.
+      </React.Fragment>
+    ),
+  },
+  {
+    topic: "Insurance Protocols",
+    artwork: (
+      <img src="/use-cases/use-case-3.png" className={styles.artworkTopic} />
+    ),
+    description: (
+      <React.Fragment>
+        When offering storage services to the network, storage providers are
+        required to put up a large amount of collateral to secure their services 
+        in case of faults. Insurance protocols could help storage providers 
+        raise funds for these up-front costs from investors, or distribute risk 
+        of a fault across a wider community. Investors (or DAOs) can receive a
+        revenue stream by purchasing said risk in exchange for recurring fees.
+      </React.Fragment>
+    ),
+  },
+  {
+    topic: "Storage Derivatives",
+    artwork: (
+      <img src="/use-cases/use-case-4.png" className={styles.artworkTopic} />
+    ),
+    description: (
+      <React.Fragment>
+        The dynamic nature of decentralized storage costs cause planning
+        challenges for both storage clients and providers. Data producers (clients) will need to
+        store data in the future for a predefined period of time and will want
+        to budget in costs now (e.g. a bank who knows they will need to store 1
+        TB of 2021 transaction data from January 1, 2022 to December 31, 2022).
+        Storage providers will want to know how much to spend on hardware based
+        on their predicted earnings. Providing a way to smooth predictability
+        about future costs and returns will bring stability to this market and
+        reduce risk.
+        <br />
+        <br />
+        By enabling users to “pre-buy” a chunk of storage space at a specific
+        price today, a data producer will be able to predict their costs over a
+        given period of time. By enabling a storage provider to bid on
+        delivering a block of storage in the future, they will be able to
+        purchase hardware and be more secure that they are margin positive.
       </React.Fragment>
     ),
   },
@@ -148,7 +171,10 @@ const TOPICS = [
         DAOs (Decentralized Autonomous Organizations) are member-owned
         communities with no centralized leadership. With the FVM, communities
         can collectively fund and govern the storage of public-good datasets to
-        ensure their long term preservation and availability.
+        ensure their long term preservation and availability. DAO members can 
+        collectively make decisions on what data to add to their collection,
+        pool resources for its long-term preservation, and/or benefit from 
+        potential dataset earnings via accessibility to compute protocols.
       </React.Fragment>
     ),
   },
@@ -159,7 +185,7 @@ const TOPICS = [
     ),
     description: (
       <React.Fragment>
-        Dedicated networks –with independent incentive systems– that conduct
+        L2s are dedicated networks –with independent incentive systems– that conduct
         specialized tasks on top of the Filecoin network. Layer 2 solutions
         commit their state onto the Filecoin network (Layer 1), thus inheriting
         its security properties.
@@ -184,17 +210,21 @@ const TOPICS = [
     ),
     description: (
       <React.Fragment>
-        Filecoin actors that serve as bridges by understanding the cryptographic
+        Filecoin actors can serve as bridges by understanding the cryptographic
         primitives and data structures of other chains, so as to demonstrate to
-        other Filecoin actors that certain events or state transitions happened,
-        and viceversa, or move value atomically across chains.
+        other Filecoin actors that certain events or state transitions happened 
+        on another chain. Native bridge actors can also be used to move value atomically across chains.
         <br />
         <br />
         This also works in the opposite direction. For example, Filecoin actors
         would be able to generate proofs about Filecoin state (e.g. deals,
-        sectors, storage providers, balances) or transactions that are
+        sectors, storage providers, balances) or transactions in a way that is
         comprehensible by Ethereum, NEAR, Solana, etc. counterparts bridge
         contracts.
+        <br />
+        <br />
+        The FVM helps Filecoin interoperate more trustlessly and smoothly with 
+        other blockchains by offering a pluggable smart contract layer on both sides.
       </React.Fragment>
     ),
   },
@@ -207,12 +237,12 @@ const TOPICS = [
       <React.Fragment>
         To store data in the Filecoin network, clients must find a suitable
         storage provider and perform a deal with them. This model is simple but
-        rather inflexible.
+        rather inflexible. The FVM unlocks creating many new storage market protocols!
         <br />
         <br />
         Imagine creating composable market primitives such as: * storage
         bounties, where storage providers compete to win deals, bringing the
-        price down. * full-sector auctions, where clients get a discount for
+        price down for clients. * full-sector auctions, where clients get a discount for
         purchasing and occupying entire sectors. * volume discounts, where the
         price is further reduced for purchasing multiple sectors at once. *
         sector rebates, where the provider refunds the client (who could be a
@@ -229,13 +259,14 @@ const TOPICS = [
       <React.Fragment>
         Clients want their data to be replicated across the network to maximize
         the chances it will survive in the event of storage provider failures.
-        To achieve that today, clients have to execute N deals with miners,
+        To achieve that today, clients have to execute N deals with storage providers,
         transferring the data N times.
         <br />
         <br />
-        Replication workers solve this problem by charging an amount to act as a
-        mediator. They take the Filecoin deal, and make sure it's replicated N
-        times across the network. They do so in accordance with a user-defined
+        Replication workers solve this problem by charging a small fee to act as a
+        mediator - saving the client the time and overhead of negotiating multiple deals. 
+        Instead, the replication worker can automaticaly replicate the Filecoin deal N
+        times across the network in accordance with the user-defined
         policy based on number of replicas, region selection, latency, price,
         etc. (potentially using L2 reputation systems to decide where to place
         the data!)
@@ -327,23 +358,20 @@ function Home(props) {
       <div className={styles.section}>
         <h2 className={styles.h2}>Possibilities</h2>
         <p className={styles.p} style={{ maxWidth: 488, paddingTop: 24 }}>
-          <b>Storage and programs under one roof.</b> This is the grand vision
-          of the Filecoin network. And the Filecoin Virtual Machine is pivotal
-          to make it happen.
+          <b>User-defined smart contracts + provable storage = FVM</b>
           <br />
           <br />
           The FVM unlocks boundless possibilities, ranging from programmable
-          storage primitives (such as storage bounties, auctions, and more), to
-          Layer 2 solutions (such as reputation systems, data availability
-          sampling, computation fabrics, and incentive-aligned Content Delivery
-          Networks), to cross-chain interoperability bridges (e.g. connecting
-          Filecoin with Ethereum, Solana, NEAR, and more, in a trustless
-          manner), to data-oriented Decentralized Autonomous Organizations
-          (DAOs).
+          storage primitives (such as storage bounties, auctions, and more),
+          to cross-chain interoperability bridges (e.g. trustlessly connecting
+          Filecoin with Ethereum, Solana, NEAR, and more), to data-oriented 
+          Decentralized Autonomous Organizations (DAOs), to Layer 2 solutions 
+          (such as reputation systems, data availability sampling, computation 
+          fabrics, and incentive-aligned Content Delivery Networks).
           <br />
           <br />
           Here are some of the things we're excited to see deployed on the
-          Filecoin network. It's on you to make them happen!
+          Filecoin network. It's up to you to make them happen!
         </p>
 
         <div className={styles.actions}>
