@@ -24,7 +24,7 @@ const TOPICS = [
     ),
     description: (
       <React.Fragment>
-        Staking Protocols can substantially improve the capital efficiency in
+        Staking protocols can substantially improve the capital efficiency in
         the Filecoin economy - matching yield-seeking token holders and
         liquidity-seeking storage providers. With staking protocols, token
         holders can trustlessly pool their assets and set rules and terms by
@@ -32,10 +32,10 @@ const TOPICS = [
         liquidity.
         <br />
         <br />
-        Staking protocols can use on-chain metrics (e.g. longevity of an
+        Staking protocols can use on-chain data points (e.g. longevity of an
         address, history of slashing) to better assess risk while also allowing
         storage providers of all sizes to access capital. This can help storage
-        providers fund up-front capital costs like Filecoin+ deal collateral, while
+        providers fund upfront capital costs like Filecoin Plus deal collateral, while
         giving staking pools access to significant yield potential.
       </React.Fragment>
     ),
@@ -96,7 +96,7 @@ const TOPICS = [
         <br />
         <br />
         Example use cases: Crime statistics, inflation metrics, election
-        results, envrionmental data records, etc.
+        results, environmental data records, etc.
       </React.Fragment>
     ),
   },
@@ -107,7 +107,7 @@ const TOPICS = [
     ),
     description: (
       <React.Fragment>
-        Many clients who store data on Filecoin want both the verifiability of a storage 
+        Many clients who store data on Filecoin want both the guarantee of a storage 
         network that provably stores their data over time, and the ease of use of a fire-and-forget
         storage system they can trust to automatically repair itself over time.
         <br />
@@ -223,7 +223,7 @@ const TOPICS = [
         contracts.
         <br />
         <br />
-        The FVM helps Filecoin interoperate more trustlessly and smoothly with 
+        The FVM enables Filecoin to interoperate more trustlessly and smoothly with 
         other blockchains by offering a pluggable smart contract layer on both sides.
       </React.Fragment>
     ),
