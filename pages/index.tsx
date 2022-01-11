@@ -394,6 +394,23 @@ function Home(props) {
 
       <div className={styles.section}>
         <h2 className={styles.h2} style={{ marginTop: 88, marginBottom: 24 }}>
+          FVM Technical Design
+        </h2>
+        <p
+          className={styles.p}
+          style={{ maxWidth: 488, paddingTop: 24, paddingBottom: 64 }}
+        >
+          The FVM is a WebAssembly core runtime acting on IPLD actors and data. 
+          It is responsible for gas accounting, state & chain access, cross-contract 
+          calls, syscalls, actor isolation, and continuations within the Filecoin blockchain.
+          It supports native actors written in languages that compile to WASM, and also 
+          supports running "foreign VMs" such as EVM, JS/SES, LLVM IR, BPF, and more. 
+          There is a reference SDK built in Rust (coming soon!) for smart contract development.
+        </p>
+      </div>
+      
+      <div className={styles.section}>
+        <h2 className={styles.h2} style={{ marginTop: 88, marginBottom: 24 }}>
           Roadmap
         </h2>
         <p
