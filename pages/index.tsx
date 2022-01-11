@@ -411,6 +411,22 @@ function Home(props) {
       
       <div className={styles.section}>
         <h2 className={styles.h2} style={{ marginTop: 88, marginBottom: 24 }}>
+          EVM Compatibility
+        </h2>
+        <p
+          className={styles.p}
+          style={{ maxWidth: 488, paddingTop: 24, paddingBottom: 64 }}
+        >
+          The FVM supports EVM smart contracts out of the box, using all the EVM standards
+          and developer tooling solidity devs are familiar with. EVM contracts ported to 
+          Filecoin shouldn't require any new auditing or manual changes.
+          
+          The FVM achieves this through the SputnikVM Rust EVM implementation.
+        </p>
+      </div>
+      
+      <div className={styles.section}>
+        <h2 className={styles.h2} style={{ marginTop: 88, marginBottom: 24 }}>
           Roadmap
         </h2>
         <p
